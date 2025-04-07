@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="/alphaNet/styles/log.css">
 </head>
 <body>
+    <div class="background-overlay"></div>
     <header>
         <div>
-            <section>
-                
-            </section>
+            <section></section>
         </div>
     </header>
     <div class="login-container">
@@ -26,12 +25,10 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="btn-login">Ingresar</button>
-            <section class="register">
-                <a href="">No tienes cuenta registrate </a>
-            </section>
-            <section class="contaseña">
-                <a href="">Olvidaste tu contrasaeña</a>
-            </section>
+            <div class="form-links">
+                <a href="#" class="register-link">No tienes cuenta? Regístrate</a>
+                <a href="#" class="forgot-link">Olvidaste tu contraseña?</a>
+            </div>
         </form>
         <p id="error-message" class="error"></p>
     </div>
