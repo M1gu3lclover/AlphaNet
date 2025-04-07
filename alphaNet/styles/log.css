@@ -5,7 +5,7 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(/Frontend/resources/modern-equipped-computer-lab.jpg);
+    background-image: url("/alphaNet/resources/modern-equipped-computer-lab.jpg");
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
