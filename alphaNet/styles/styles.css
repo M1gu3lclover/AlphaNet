@@ -1,0 +1,270 @@
+/* Variables */
+:root {
+    --color-azul: #0066cc;
+    --color-gris: #f7f7f7;
+    --color-negro: #333333;
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: var(--color-negro);
+}
+
+.hero {
+    background-image: url("/resources/programming-background-with-person-working-with-codes-computer\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.521); /* Negro con 30% opacidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté encima */
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0052a3;
+}
+
+/* Servicios Section */
+.servicios {
+    padding: 4rem 0;
+    background-color: var(--color-gris);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servicio {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-azul);
+    border-radius: 50%;
+}
+
+.servicio-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Contacto Section */
+.contacto {
+    padding: 4rem 0;
+}
+
+.contacto form {
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Contenedor principal (padre) */
+.container2 {
+    display: flex;                  /* Activa Flexbox */
+    align-items: center;            /* Centra verticalmente los hijos */
+    justify-content: space-between; /* Separa texto e imagen */
+    gap: 2rem;                     /* Espacio entre elementos */
+    max-width: 1200px;             /* Ancho máximo del contenedor */
+    margin: 0 auto;                /* Centra el contenedor en la página */
+    padding: 2rem;                 /* Espaciado interno */
+}
+
+/* Contenedor de texto (hijo izquierdo) */
+.container2 > div:first-child {
+    flex: 1;                       /* Ocupa el 50% del espacio */
+    padding-right: 1rem;           /* Espacio entre texto e imagen */
+}
+
+/* Contenedor de la imagen (hijo derecho) */
+.img1 {
+    flex: 1;                       /* Ocupa el otro 50% */
+    text-align: right;             /* Alinea la imagen a la derecha */
+}
+
+.img1 img {
+    max-width: 100%;               /* La imagen no se desborda */
+    height: auto;                  /* Mantiene la proporción */
+    border-radius: 8px;            /* Bordes redondeados (opcional) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra (opcional) */
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-gris);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contenedor general para ambas secciones */
+.seccion-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Estilo base para texto e imágenes */
+.seccion-contenedor > div {
+    flex: 1; /* Ocupa 50% del espacio */
+}
+
+/* Imagen a la IZQUIERDA (¿Quiénes somos?) */
+.imagen-izquierda img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto a la DERECHA (¿Quiénes somos?) */
+.texto-derecha {
+    padding-left: 2rem;
+}
+
+/* Texto a la IZQUIERDA (¿Por qué elegirnos?) */
+.texto-izquierda {
+    padding-right: 2rem;
+}
+
+/* Imagen a la DERECHA (¿Por qué elegirnos?) */
+.imagen-derecha img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Apila en móviles */
+@media (max-width: 768px) {
+    .seccion-contenedor {
+        flex-direction: column;
+    }
+    .texto-derecha, 
+    .texto-izquierda {
+        padding: 0;
+        order: 2; /* Texto debajo de la imagen */
+    }
+    .imagen-izquierda, 
+    .imagen-derecha {
+        order: 1;
+    }
+}
+.seccion-contenedor img {
+    transition: transform 0.3s;
+}
+.seccion-contenedor img:hover {
+    transform: scale(1.02);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.pie{
+    color:#333333;
+}
