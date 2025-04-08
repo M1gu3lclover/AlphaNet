@@ -33,7 +33,7 @@ header .titulo {
     color:aliceblue
 }
 .cabecera {
-    background-color: #0066cc;
+    background-color: rgba(12, 84, 151, 0.664);
     color: white;
     padding: 1rem;
     text-align: left;
@@ -83,10 +83,10 @@ body {
 }
 
 .login-container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.705);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(18, 33, 240, 0.541);
     width: 100%;
     max-width: 400px;
 }
@@ -98,7 +98,7 @@ body {
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #000000;
 }
 
 .input-group input {
